@@ -1,6 +1,6 @@
-import Navigation from './Navigation'
 import profile from '../assets/images/JongHunYun.jpg';
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 const MainContainer = styled.div`
 
   width: 55%;
@@ -22,7 +22,7 @@ const Introduction = styled.div`
 `
 const Greeting = styled.h1`
   display: inline;
-  color: #3C4F73;
+  color:  ${props=>props.theme.colors.blue};
   font-size: 5rem;
   font-weight: bold;
   background-color: #FACE70;
@@ -34,13 +34,13 @@ const JobTitle = styled.h3`
     font-weight: bold;
     line-height: 1.2;
     margin-top: 40px;
-    color: #3C4F73;
+    color:  ${props=>props.theme.colors.blue};;
 `
 const ShortIntroduction = styled.p`
   margin-top: 40px;
 `
 const IntroHeading = styled.h6`
-  color: #3C4F73;
+  color: ${props=>props.theme.colors.blue};
   font-size: 1.2rem;
   font-weight: bold;
 `
@@ -54,8 +54,8 @@ const DirectionButton = styled.button`
   margin-top: 20px;
   height: 50px;
   font-size: 1rem;
-  background-color: ${props=>props.color||"#BADA55"};
-  box-shadow: 3px 5px #566FB8;
+  background-color: ${props=>props.color||props.theme.buttonColors.green};
+  box-shadow: 3px 5px ${(props)=>props.theme.colors.lightblue};
   color: white;
   font-size: 0.9rem;
   border-radius: 20px;
@@ -76,9 +76,9 @@ export default function Main() {
           <Context>
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolor magni omnis repudiandae? Consectetur autem, ad dicta ullam sequi iusto sunt quaerat possimus recusandae assumenda labore deleniti, rem corporis sed.
           </Context>
-          <DirectionButton>About</DirectionButton>
-          <DirectionButton color={"#b86383"}>Skills</DirectionButton>
-          <DirectionButton  color={"#9064bb"}>Projects</DirectionButton>
+          <Link to="/about"><DirectionButton >About</DirectionButton></Link>
+          <Link to="/skills"><DirectionButton color={props=>props.theme.buttonColors.pink}>Skills</DirectionButton></Link>
+          <Link to="/projects"><DirectionButton  color={props=>props.theme.buttonColors.purple}>Projects</DirectionButton></Link>
         </ShortIntroduction>
       </Introduction>
     </MainContainer>
