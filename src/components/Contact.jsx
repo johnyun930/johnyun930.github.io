@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContactContainer = styled.div`
-    width: 65%;
+    width: 70%;
     height: 100vh;
     margin: 70px auto 0;
 ` 
@@ -51,16 +51,21 @@ const ContactContext = styled.h3`
 `
 const Formtitle = styled.h3`
     font-size: 1.4rem;
+    font-weight: bold;
     color: ${(props)=>props.theme.colors.blue};
 `
 const Label = styled.label`
     font-weight: bold;
-    font-size: 1rem;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
     color: ${(props)=>props.theme.colors.lightblue};
 `
 const Input = styled.input`
-    width: 100%;
-    background-color: ${(props)=>props.theme.colors.lightblue};
+    width: 250px;
+    height: 50px;
+    box-shadow: 5px 5px 3px #536EB7;
+    background-color: #DAE3FA;
 `
 
 const Form = styled.form`
@@ -70,10 +75,31 @@ const Form = styled.form`
 `
 const InputContainer =styled.div`
     width: 100%;
-    height: 60%;
+    height: 40%;
     display:grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+`
+const TextAreaContainer = styled.div`
+    width: 100%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: 60% 30%;
+`
+const TextArea = styled.textarea`
+    width: 350px;
+    height: 200px;
+    resize: none;
+    box-shadow: 5px 5px 3px #536EB7;
+    background-color: #DAE3FA;
+`
+
+const SubmitButton = styled.button`
+    height:100%;
+    font-size: 2.5rem;
+    color: ${(props)=>props.theme.colors.lightblue};
+    font-weight: bold;
+    
 `
 
 
@@ -107,7 +133,28 @@ export default function Contact(){
                                 <Label>First Name</Label>
                                 <Input type="text"></Input>
                             </Fulldiv>
+                            <Fulldiv>
+                                <Label>First Name</Label>
+                                <Input type="text"></Input>
+                            </Fulldiv>
+                            <Fulldiv>
+                                <Label>First Name</Label>
+                                <Input type="text"></Input>
+                            </Fulldiv>
+                            <Fulldiv>
+                                <Label>First Name</Label>
+                                <Input type="text"></Input>
+                            </Fulldiv>
                         </InputContainer>
+                        <TextAreaContainer>
+                            <Fulldiv>
+                            <Label>Message</Label>
+                            <TextArea></TextArea>
+                            </Fulldiv>
+                            <Fulldiv>
+                                <SubmitButton>Submit</SubmitButton>
+                            </Fulldiv>
+                        </TextAreaContainer>
                     </Form>
                 </Fulldiv>
             </InnerContainer>

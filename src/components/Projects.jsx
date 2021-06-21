@@ -55,7 +55,7 @@ const ProjectTitle = styled.h2`
 `
 const ProjectExplaination = styled.p`
     line-height: 1.5;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-top: 40px;
     white-space: pre-line;
     font-weight: lighter;
@@ -63,7 +63,7 @@ const ProjectExplaination = styled.p`
 
 const SkillAdopted = styled.p`
     margin-top: 40px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: lighter;
 `
 const SkillBox = styled(Fulldiv)`
@@ -77,10 +77,11 @@ const SkillList = styled.li`
     list-style-position: inside;
 `
 const ProjectImage =styled.img`
-    margin-top: 40px;
-    width: 90%;
+    width: 70%;
     height: 75%;
     background-color: white;
+    position: relative;
+    left: 200px;
 `
 
 const SingleProject = ()=>{
