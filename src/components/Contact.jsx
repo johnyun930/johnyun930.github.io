@@ -1,19 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+
+
+const info = [
+    { title: "Phone", context: "236-869-1001" },
+    { title: "Email", context: "johnyun930@gmail.com" },
+    { title: "Follow Me", context: <><a href="https://github.com/johnyun930"><GitHubIcon /></a><a href="https://www.linkedin.com/in/jonghunyun"> <LinkedInIcon fontSize="large" /></a></> },
+]
+
 
 const ContactContainer = styled.div`
     width: 70%;
     height: 100vh;
     margin: 70px auto 0;
-` 
+`
 
 const Title = styled.h1`
     font-size: 3rem;
-    color: ${(props)=>props.theme.colors.blue};
+    color: ${(props) => props.theme.colors.blue};
     font-weight: bold;
 
 `
-const InnerContainer =styled.div`
+const InnerContainer = styled.div`
     width: 100%;
     height: 90%;
     display: grid;
@@ -29,7 +39,7 @@ const SubTitle = styled.h6`
     font-size:1rem;
     padding-left: 5px;
     font-weight: bold;
-    color: ${(props)=>props.theme.colors.blue};
+    color: ${(props) => props.theme.colors.blue};
 `
 const ContactList = styled.div`
     margin-top: 100px;
@@ -42,24 +52,24 @@ const ContactColumn = styled.div`
 const ContactTitle = styled.h2`
     font-size: 1.5rem;
     font-weight: bold;
-    color: ${(props)=>props.theme.colors.lightblue};
+    color: ${(props) => props.theme.colors.lightblue};
 `
 const ContactContext = styled.h3`
     font-size: 1.2rem;
     font-weight: bold;
-    color: ${(props)=>props.theme.colors.blue};
+    color: ${(props) => props.theme.colors.blue};
 `
 const Formtitle = styled.h3`
     font-size: 1.4rem;
     font-weight: bold;
-    color: ${(props)=>props.theme.colors.blue};
+    color: ${(props) => props.theme.colors.blue};
 `
 const Label = styled.label`
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
     font-size: 1.4rem;
-    color: ${(props)=>props.theme.colors.lightblue};
+    color: ${(props) => props.theme.colors.lightblue};
 `
 const Input = styled.input`
     width: 250px;
@@ -73,7 +83,7 @@ const Form = styled.form`
     height: 70%;
     margin-top: 100px;
 `
-const InputContainer =styled.div`
+const InputContainer = styled.div`
     width: 100%;
     height: 40%;
     display:grid;
@@ -97,32 +107,31 @@ const TextArea = styled.textarea`
 const SubmitButton = styled.button`
     height:100%;
     font-size: 2.5rem;
-    color: ${(props)=>props.theme.colors.lightblue};
+    color: ${(props) => props.theme.colors.lightblue};
     font-weight: bold;
     
 `
 
 
-export default function Contact(){
+export default function Contact() {
 
-    return(
+    return (
         <ContactContainer>
             <Title>Questions?</Title>
             <InnerContainer>
                 <Fulldiv>
                     <SubTitle>Looking forward to hearing from you!</SubTitle>
                     <ContactList>
-                        <ContactColumn>
-                            <ContactTitle>Phone</ContactTitle>
-                            <ContactContext>236-869-1001</ContactContext>
-                        </ContactColumn>
-                        <ContactColumn>
-                            <ContactTitle>Phone</ContactTitle>
-                            <ContactContext>236-869-1001</ContactContext>
-                        </ContactColumn><ContactColumn>
-                            <ContactTitle>Phone</ContactTitle>
-                            <ContactContext>236-869-1001</ContactContext>
-                        </ContactColumn>
+                        {info.map((data) => {
+                            return (
+                                <>
+                                    <ContactColumn>
+                                        <ContactTitle>{data.title}</ContactTitle>
+                                        <ContactContext>{data.context}</ContactContext>
+                                    </ContactColumn>
+                                </>
+                            )
+                        })}
                     </ContactList>
                 </Fulldiv>
                 <Fulldiv>
@@ -134,22 +143,22 @@ export default function Contact(){
                                 <Input type="text"></Input>
                             </Fulldiv>
                             <Fulldiv>
-                                <Label>First Name</Label>
+                                <Label>Last Name</Label>
                                 <Input type="text"></Input>
                             </Fulldiv>
                             <Fulldiv>
-                                <Label>First Name</Label>
+                                <Label>Email</Label>
                                 <Input type="text"></Input>
                             </Fulldiv>
                             <Fulldiv>
-                                <Label>First Name</Label>
+                                <Label>Phone</Label>
                                 <Input type="text"></Input>
                             </Fulldiv>
                         </InputContainer>
                         <TextAreaContainer>
                             <Fulldiv>
-                            <Label>Message</Label>
-                            <TextArea></TextArea>
+                                <Label>Message</Label>
+                                <TextArea></TextArea>
                             </Fulldiv>
                             <Fulldiv>
                                 <SubmitButton>Submit</SubmitButton>

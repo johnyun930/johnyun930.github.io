@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Node from '../assets/images/nodejs.png';
+import Database from '../assets/images/database.png';
+import TypeScript from '../assets/images/typescript.png';
+import react from '../assets/images/atom.png';
 
 const SkillContainer = styled.div`
     width: 100%;
@@ -11,9 +15,9 @@ const Title = styled.h1`
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
-    color: ${(props)=>props.theme.colors.blue};
+    color: ${(props) => props.theme.colors.blue};
 `
-const MainContainer =styled.div`
+const MainContainer = styled.div`
     width:80%;
     height: 70%;
     display: grid;
@@ -50,47 +54,47 @@ const SkillContext = styled.p`
 
 
 
-export default function Skills(){
+export default function Skills() {
 
-    return(
+    return (
         <SkillContainer>
-        <Title>John Yun's Skills</Title>
-        <MainContainer>
-            <ItemBox>
-                <Fulldiv>
-                    <Icon></Icon>
-                </Fulldiv>
-                <Fulldiv>
-                    <SkillTitle>JavaScript</SkillTitle>
-                    <SkillContext>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vitae nulla minus corrupti natus? Repellendus molestiae reprehenderit ratione nemo vitae iure? Libero reiciendis culpa nobis neque quam et officiis tempora!</SkillContext>
-                </Fulldiv>
-            </ItemBox>
-            <ItemBox>
-                <Fulldiv>
-                    <Icon></Icon>
-                </Fulldiv>
-                <Fulldiv>
-                    <SkillTitle>JavaScript</SkillTitle>
-                    <SkillContext>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vitae nulla minus corrupti natus? Repellendus molestiae reprehenderit ratione nemo vitae iure? Libero reiciendis culpa nobis neque quam et officiis tempora!</SkillContext>
-                </Fulldiv>
-            </ItemBox><ItemBox>
-                <Fulldiv>
-                    <Icon></Icon>
-                </Fulldiv>
-                <Fulldiv>
-                    <SkillTitle>JavaScript</SkillTitle>
-                    <SkillContext>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vitae nulla minus corrupti natus? Repellendus molestiae reprehenderit ratione nemo vitae iure? Libero reiciendis culpa nobis neque quam et officiis tempora!</SkillContext>
-                </Fulldiv>
-            </ItemBox><ItemBox>
-                <Fulldiv>
-                    <Icon></Icon>
-                </Fulldiv>
-                <Fulldiv>
-                    <SkillTitle>JavaScript</SkillTitle>
-                    <SkillContext>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vitae nulla minus corrupti natus? Repellendus molestiae reprehenderit ratione nemo vitae iure? Libero reiciendis culpa nobis neque quam et officiis tempora!</SkillContext>
-                </Fulldiv>
-            </ItemBox>
-        </MainContainer>
+            <Title>John Yun's Skills</Title>
+            <MainContainer>
+                <ItemBox>
+                    <Fulldiv>
+                        <Icon src={react}></Icon>
+                    </Fulldiv>
+                    <Fulldiv>
+                        <SkillTitle>React</SkillTitle>
+                        <SkillContext></SkillContext>
+                    </Fulldiv>
+                </ItemBox>
+                <ItemBox>
+                    <Fulldiv>
+                        <Icon src={Node}></Icon>
+                    </Fulldiv>
+                    <Fulldiv>
+                        <SkillTitle>NodeJS & JavaScript</SkillTitle>
+                        <SkillContext></SkillContext>
+                    </Fulldiv>
+                </ItemBox><ItemBox>
+                    <Fulldiv>
+                        <Icon src={TypeScript}></Icon>
+                    </Fulldiv>
+                    <Fulldiv>
+                        <SkillTitle>Typescript</SkillTitle>
+                        <SkillContext>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vitae nulla minus corrupti natus? Repellendus molestiae reprehenderit ratione nemo vitae iure? Libero reiciendis culpa nobis neque quam et officiis tempora!</SkillContext>
+                    </Fulldiv>
+                </ItemBox><ItemBox>
+                    <Fulldiv>
+                        <Icon src={Database}></Icon>
+                    </Fulldiv>
+                    <Fulldiv>
+                        <SkillTitle>Database</SkillTitle>
+                        <SkillContext>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vitae nulla minus corrupti natus? Repellendus molestiae reprehenderit ratione nemo vitae iure? Libero reiciendis culpa nobis neque quam et officiis tempora!</SkillContext>
+                    </Fulldiv>
+                </ItemBox>
+            </MainContainer>
         </SkillContainer>
     )
 
