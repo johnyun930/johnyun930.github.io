@@ -24,14 +24,14 @@ const Greeting = styled.h1`
   display: inline;
   color:  ${props => props.theme.colors.blue};
   font-size: 5rem;
-  font-family: 'Work Sans';
+  font-family: ${props=>props.theme.font.title};
   font-weight: 600;
   background-color: #FACE70;
   text-shadow: 6px 2px 2px white;
 `
 
 const JobTitle = styled.h3`
-  font-family: 'Work Sans';
+  font-family: ${props=>props.theme.font.title};
 
     font-size: 2.5rem;
     font-weight: 600;
@@ -43,14 +43,14 @@ const ShortIntroduction = styled.p`
   margin-top: 40px;
 `
 const IntroHeading = styled.h6`
-  font-family: 'Work Sans';
+  font-family: ${props=>props.theme.font.title};
 
   color: ${props => props.theme.colors.blue};
   font-size: 1.2rem;
   font-weight: 600;
 `
 const Context = styled.p`
-  font-family: "Castoro";
+  font-family: ${props=>props.theme.font.context};
   font-size: 1rem;
   color: #000000;
 `
@@ -80,11 +80,11 @@ export default function Main() {
           <ShortIntroduction>
             <IntroHeading>A Bit About Me</IntroHeading>
             <Context>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolor magni omnis repudiandae? Consectetur autem, ad dicta ullam sequi iusto sunt quaerat possimus recusandae assumenda labore deleniti, rem corporis sed.
+              John is passionate and keen. He is a quick leaner and problem-solver. He likes learning more and improving himself.
             </Context>
             <Link to="/about"><DirectionButton >About</DirectionButton></Link>
-            <Link to="/skills"><DirectionButton color={props => props.theme.buttonColors.pink}>Skills</DirectionButton></Link>
-            <Link to="/projects"><DirectionButton color={props => props.theme.buttonColors.purple}>Projects</DirectionButton></Link>
+            <Link to="/skill"><DirectionButton color={props => props.theme.buttonColors.pink}>Skills</DirectionButton></Link>
+            <Link to="/project"><DirectionButton color={props => props.theme.buttonColors.purple}>Projects</DirectionButton></Link>
           </ShortIntroduction>
         </Introduction>
       </MainContainer>

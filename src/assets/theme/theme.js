@@ -10,6 +10,9 @@ export const theme = {
     green: "#BADA55",
     pink: "#B86383",
     purple: "#9064BB"
+  },
+  font:{
+    title: "Work Sans",
+    context: "Castoro"
   }
- 
 };

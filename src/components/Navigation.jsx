@@ -23,19 +23,20 @@ const MainIcon = styled.img`
   height: 30px;
 `
 const LogoName = styled.h1`
-  font-family: 'Work Sans';
+  font-family: ${(props)=>props.theme.font.title};
   color:#566FB8;
   font-size: 2rem;
   font-weight: 600;
 `
 const JobTitle = styled.h3`
-  font-family: 'Castoro';
+  font-family: ${(props)=>props.theme.font.context};
   color: #7A7DA3;
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 2.7;
 `
 const NavButton = styled.div`
+  font-family: ${props=>props.theme.font.title};
   min-width: 70px;
   text-align: center;
   font-size: 1.5rem;
@@ -64,7 +65,7 @@ export default function Navigation() {
     <>
       <NavigationContainer>
         <NavigationBar direction={true}>
-          <MainIcon src={Logo}></MainIcon>
+          <Link to="/"><MainIcon src={Logo}></MainIcon></Link>
           <LogoName>John Yun</LogoName>
           <JobTitle>Full Stack Developer</JobTitle>
         </NavigationBar>
