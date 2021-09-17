@@ -1,7 +1,7 @@
 import React from "react";
+import { Fulldiv } from "../utills.styles";
 import {
   ContextContainer,
-  Fulldiv,
   ProjectTitle,
   ProjectExplaination,
   SkillAdopted,

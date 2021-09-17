@@ -10,11 +10,11 @@ import {
   Title,
   MainContainer,
   ItemBox,
-  Fulldiv,
   Icon,
   SkillTitle,
   SkillContext,
 } from "./skills.styles";
+import { Fulldiv } from "../../components/utills.styles";
 const info = [
   { image: react, title: "React", proficient: 4 },
   { image: Node, title: "NodeJS", proficient: 4 },

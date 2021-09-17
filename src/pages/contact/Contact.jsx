@@ -3,7 +3,6 @@ import {
   ContactContainer,
   Title,
   InnerContainer,
-  Fulldiv,
   SubTitle,
   ContactList,
   ContactColumn,
@@ -20,6 +19,7 @@ import {
 } from "./contact.styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import { Fulldiv } from "../../components/utills.styles";
 
 const info = [
   { title: "Phone", context: "236-869-1001" },

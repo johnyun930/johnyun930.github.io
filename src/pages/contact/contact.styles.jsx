@@ -17,10 +17,6 @@ export const InnerContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
-export const Fulldiv = styled.div`
-  width: 100%;
-  height: 100%;
-`;
 
 export const SubTitle = styled.h6`
   font-size: 1rem;

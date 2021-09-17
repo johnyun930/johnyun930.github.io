@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Fulldiv } from "../utills.styles";
 
 export const ViewButton = styled.a`
   display: inline-block;
@@ -25,11 +26,7 @@ export const ContextContainer = styled.div`
   display: grid;
   grid-template-columns: 30% 60%;
 `;
-export const Fulldiv = styled.div`
-  width: 100%;
-  height: 100%;
-  text-align: ${({ direction }) => (direction ? "right" : "left")};
-`;
+
 export const ProjectTitle = styled.h2`
   font-size: 2rem;
   font-weight: bold;

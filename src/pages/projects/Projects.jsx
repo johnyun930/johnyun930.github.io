@@ -5,13 +5,8 @@ import tourReview from "../../assets/images/tourReview.jpg";
 import piggyBank from "../../assets/images/piggybank.png";
 import league from "../../assets/images/leagueofDelivery.png";
 import { Project } from "../../components/project/project.components";
-import {
-  ProjectContainer,
-  Title,
-  Fulldiv,
-  ViewButton,
-} from "./projects.styles";
-
+import { ProjectContainer, Title, ViewButton } from "./projects.styles";
+import { Fulldiv } from "../../components/utills.styles";
 const info = [
   {
     year: "Jan 2021 - May 2021",
