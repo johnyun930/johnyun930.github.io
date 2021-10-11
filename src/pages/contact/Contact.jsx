@@ -5,25 +5,17 @@ import {
   InnerContainer,
   SubTitle,
   ContactList,
-  ContactColumn,
-  ContactTitle,
-  ContactContext,
   Formtitle,
-  Form,
-  TextAreaContainer,
-  TextArea,
-  SubmitButton,
-  InputContainer,
-  Label,
-  Input,
 } from "./contact.styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Fulldiv } from "../../components/utills.styles";
+import { ContactInfo } from "./ContactInfo";
+import { MessageForm } from "./MessageForm";
 
 const info = [
   { title: "Phone", context: "236-869-1001" },
-  { title: "Email", context: "johnyun930@gmail.com" },
+  { title: "Email", context: "johnyunwork@gmail.com" },
   {
     title: "Follow Me",
     context: (
@@ -49,48 +41,13 @@ export default function Contact() {
           <SubTitle>Looking forward to hearing from you!</SubTitle>
           <ContactList>
             {info.map((data) => {
-              return (
-                <>
-                  <ContactColumn>
-                    <ContactTitle>{data.title}</ContactTitle>
-                    <ContactContext>{data.context}</ContactContext>
-                  </ContactColumn>
-                </>
-              );
+              return <ContactInfo {...data} />;
             })}
           </ContactList>
         </Fulldiv>
         <Fulldiv>
           <Formtitle>Simply leave a message</Formtitle>
-          <Form>
-            <InputContainer>
-              <Fulldiv>
-                <Label>First Name</Label>
-                <Input type="text"></Input>
-              </Fulldiv>
-              <Fulldiv>
-                <Label>Last Name</Label>
-                <Input type="text"></Input>
-              </Fulldiv>
-              <Fulldiv>
-                <Label>Email</Label>
-                <Input type="text"></Input>
-              </Fulldiv>
-              <Fulldiv>
-                <Label>Phone</Label>
-                <Input type="text"></Input>
-              </Fulldiv>
-            </InputContainer>
-            <TextAreaContainer>
-              <Fulldiv>
-                <Label>Message</Label>
-                <TextArea></TextArea>
-              </Fulldiv>
-              <Fulldiv>
-                <SubmitButton>Submit</SubmitButton>
-              </Fulldiv>
-            </TextAreaContainer>
-          </Form>
+          <MessageForm />
         </Fulldiv>
       </InnerContainer>
     </ContactContainer>

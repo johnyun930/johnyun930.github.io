@@ -1,4 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const moveInLeft = keyframes`
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+  background-color: #face70;
+    }
+    
+`;
+
 export const MainContainer = styled.div`
   width: 55%;
   height: 80vh;
@@ -16,15 +30,19 @@ export const ProfileImage = styled.img`
 export const Introduction = styled.div`
   width: 100%;
   height: 100%;
+  position: relative;
 `;
 export const Greeting = styled.h1`
-  display: inline;
+  display: inline-block;
   color: ${(props) => props.theme.colors.blue};
   font-size: 5rem;
   font-family: ${(props) => props.theme.font.title};
   font-weight: 600;
-  background-color: #face70;
   text-shadow: 6px 2px 2px white;
+  overflow: hidden;
+  animation: ${moveInLeft} 2s;
+  animation-fill-mode: forwards;
+  backface-visibility: hidden;
 `;
 
 export const JobTitle = styled.h3`
@@ -58,8 +76,12 @@ export const DirectionButton = styled.button`
   height: 50px;
   font-size: 1rem;
   background-color: ${(props) => props.color || props.theme.buttonColors.green};
-  box-shadow: 3px 5px ${(props) => props.theme.colors.lightblue};
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
   color: white;
   font-size: 0.9rem;
   border-radius: 20px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;

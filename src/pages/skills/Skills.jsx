@@ -13,6 +13,10 @@ import {
   Icon,
   SkillTitle,
   SkillContext,
+  SkillCard,
+  ItemBoxBack,
+  ItemContainer,
+  SkillBoundary,
 } from "./skills.styles";
 import { Fulldiv } from "../../components/utills.styles";
 const info = [
@@ -37,15 +41,20 @@ export default function Skills() {
             }
           }
           return (
-            <ItemBox>
-              <Fulldiv>
-                <Icon src={data.image}></Icon>
-              </Fulldiv>
-              <Fulldiv>
-                <SkillTitle>{data.title}</SkillTitle>
-                <SkillContext>{stars}</SkillContext>
-              </Fulldiv>
-            </ItemBox>
+            <SkillCard>
+              <SkillBoundary>
+                <ItemBox>
+                  <Fulldiv>
+                    <Icon src={data.image}></Icon>
+                  </Fulldiv>
+                  <Fulldiv>
+                    <SkillTitle>{data.title}</SkillTitle>
+                    <SkillContext>{stars}</SkillContext>
+                  </Fulldiv>
+                </ItemBox>
+                <ItemBoxBack>back</ItemBoxBack>
+              </SkillBoundary>
+            </SkillCard>
           );
         })}
       </MainContainer>

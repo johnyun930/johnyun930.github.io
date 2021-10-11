@@ -20,6 +20,7 @@ function App() {
           <Route path="/contact" component={Contact}></Route>
           <Route path="/project" component={ProjectPage}></Route>
           <Route path="/" component={Main} />
+          <Route path="/portfolio" component={Main} />
         </Switch>
         <Footer></Footer>
       </ThemeProvider>

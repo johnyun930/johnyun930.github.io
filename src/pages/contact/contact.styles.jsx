@@ -51,14 +51,22 @@ export const Label = styled.label`
   font-weight: bold;
   display: block;
   margin-bottom: 10px;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: ${(props) => props.theme.colors.lightblue};
 `;
 export const Input = styled.input`
   width: 250px;
   height: 50px;
+  font-size: 18px;
+  padding-left: 10px;
   box-shadow: 5px 5px 3px #536eb7;
   background-color: #dae3fa;
+  color: #333030;
+  font-weight: bold;
+  transition: background-color 1s;
+  &:focus {
+    background-color: white;
+  }
 `;
 
 export const Form = styled.form`
@@ -83,8 +91,13 @@ export const TextArea = styled.textarea`
   width: 350px;
   height: 200px;
   resize: none;
+  padding: 10px;
   box-shadow: 5px 5px 3px #536eb7;
   background-color: #dae3fa;
+  transition: background-color 1s;
+  &:focus {
+    background-color: white;
+  }
 `;
 
 export const SubmitButton = styled.button`
@@ -92,4 +105,8 @@ export const SubmitButton = styled.button`
   font-size: 2.5rem;
   color: ${(props) => props.theme.colors.lightblue};
   font-weight: bold;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
