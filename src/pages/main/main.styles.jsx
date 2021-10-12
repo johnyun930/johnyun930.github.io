@@ -83,5 +83,6 @@ export const DirectionButton = styled.button`
 
   &:hover {
     transform: scale(1.1);
+    font-weight: bold;
   }
 `;

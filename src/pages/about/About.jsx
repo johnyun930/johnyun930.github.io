@@ -17,9 +17,9 @@ const info = {
 
     In 2020, John graduated from Douglas College with a dipoloma in Computer Studies and Information.
 
-    He has studied and learnt extra programming some practical projects, so he is proficient at React and NodeJS.
+    He has studied and learnt extra programming some practical projects, so he is proficient at React, NodeJS.
 
-    He is constantly working on improving his knowledge and skills on a daily basis, by subscribing Udemy and developing own projects especially on AREA. Nowaday, he is studying SocketIO, pythons for djanngo, AWS for clouding database.
+    He is constantly working on improving his knowledge and skills on a daily basis, by subscribing Udemy and developing own projects especially on AREA. Nowaday, he is studying SocketIO, pythons for django, AWS for clouding database.
     
     John's main stacks are MERN(React, NodeJS, Express, MongoDB), TypeScript, MySQL, JAVA. He is fluent in both English and Korean.`,
   img: coding,

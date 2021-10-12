@@ -9,6 +9,7 @@ import About from "./pages/about/About";
 import Skills from "./pages/skills/Skills";
 import ProjectPage from "./pages/projects/Projects";
 import Contact from "./pages/contact/Contact";
+import { Thank } from "./thankyou/Thank";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/skill" component={Skills} />
           <Route path="/contact" component={Contact}></Route>
           <Route path="/project" component={ProjectPage}></Route>
+          <Route path="/thankyou" component={Thank}></Route>
           <Route path="/" component={Main} />
           <Route path="/portfolio" component={Main} />
         </Switch>

@@ -4,7 +4,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 const info = [
   { title: "Phone", context: "236-869-1001" },
-  { title: "Email", context: "johnyun930@gmail.com" },
+  { title: "Email", context: "johnyunwork@gmail.com" },
   {
     title: "Follow Me",
     context: (
